@@ -56,19 +56,20 @@
 
         document.onkeyup = function(event) {
             var playerGuess = String.fromCharCode(event.keyCode).toLowerCase();
-            
+            incorrect.push(event.key);
         // create if/else statements for correct/incorrect letters guessed and restart game
 
         if (playerGuess === computerGuess)
         {wins++
             alert("you read my mind!")
+            incorrect = [];
             gameStart(); 
         }
         else {
             guesses --;
             if (guesses === 0) {losses ++ 
             alert ("you cannot read minds!");
-            incorrect.push("letters")
+            incorrect = [];
             
             gameStart()
             }
