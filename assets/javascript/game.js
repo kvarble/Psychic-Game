@@ -44,6 +44,7 @@ var computerGuess;
         document.onkeyup = function(event) {
             var playerGuess = String.fromCharCode(event.keyCode).toLowerCase();
             incorrect.push(event.key);
+            console.log(playerGuess);
         // create if/else statements for correct/incorrect letters guessed and restart game
 
         if (playerGuess === computerGuess)
